@@ -10,7 +10,7 @@ export class AliexpressScraperService {
     const url =
       'https://www.aliexpress.com/category/100003109/women-clothing.html';
     const pages = await this.fetchProducsPages(url);
-    console.log(pages);
+    this.logger.log(`Found ${pages.length} products.`);
   }
 
   fetchProducsPages(pageUrl: string): Promise<any[]> {
